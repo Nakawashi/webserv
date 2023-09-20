@@ -1,0 +1,249 @@
+/* body {
+	font-family: Sans-Serif;
+}
+
+h1 {
+	color: blue;
+} */
+
+
+
+/*
+@gray-darker:               #444444;
+@gray-dark:                 #696969;
+@gray:                      #999999;
+@gray-light:                #cccccc;
+@gray-lighter:              #ececec;
+@gray-lightest:             lighten(@gray-lighter,4%);
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: #999999;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* -moz-font-feature-settings: "liga" on; */
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  /*border-radius: 1rem; */
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  /*filter: saturate(180%);*/
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+
+}
+
+.card__image--prangers {
+  background-image: url(/public/images/power_rangers/power_rangers_pose.jpg);
+}
+
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+a.card__text {
+	text-decoration: none;
+	color: #696969;
+  text-transform: uppercase;
+}
+
+a.card__text:hover {
+	text-decoration: none;
+  font-weight: bold;
+	color: #212527;
+}
+
+/* delete.html */
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.flex-item-black {
+  background: url(/public/methods/delete/black.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5px;
+  width: 564px;
+  height: 696px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.flex-item-blue {
+  background: url(/public/methods/delete/blue.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5px;
+  width: 564px;
+  height: 696px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.flex-item-red {
+  background: url(/public/methods/delete/red.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5px;
+  width: 564px;
+  height: 696px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#button-black {
+  background-color: #181c1c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  bottom: -600px;
+}
+#button-black:hover {
+  background-color: #101111;
+}
+
+#button-blue {
+  background-color: #0F4DAF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  bottom: -600px;
+}
+#button-blue:hover {
+  background-color: #101111;
+}
+
+#button-red {
+  background-color: #BB0417;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  bottom: -600px;
+}
+#button-red:hover {
+  background-color: #101111;
+}
+
+.pointer {cursor: pointer;}

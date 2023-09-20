@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/public/css/main.css">
+        <title>Formulaire POST</title>
+    </head>
+    <body>
+        <form enctype="multipart/form-data" action="/public/methods/post/upload.php" method="post">
+
+            <p>Choisissez un fichier à uploader: <br />
+                <input type="file" name="file" id="file"/>
+            </p>
+            <p>
+                <input type="submit" value="Upload" />
+            </p>
+        </form>
+
+        <p><a href="/public/index.html">Retourner à l'accueil</a></p>
+
+    </body>
+</html>

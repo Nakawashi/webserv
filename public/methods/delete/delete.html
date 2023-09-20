@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-rdate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<title>Supprimer un fichier</title>
+		<link rel="stylesheet" href="/public/css/main.css">
+	</head>
+	<body>
+		<h1>Supprimer un fichier</h1>
+
+		<p>Attention : action irreversible soyez sûrs de vouloir supprimer les images !</p>
+
+		<div class="flex-container">
+			<div class="flex-item-black"><button id="button-black" class="pointer">Supprimer</button></div>
+			<div class="flex-item-blue"><button id="button-blue" class="pointer">Supprimer</button></div>
+			<div class="flex-item-red"><button id="button-red" class="pointer">Supprimer</button></div>
+		</div>
+
+		<script>			
+			document.getElementById('button-black').addEventListener('click', function () {
+				fetch('/public/methods/delete/black.jpg', {
+					method: 'DELETE',
+				})
+				document.querySelector('.flex-item-black').style.display = 'none';
+				//location.reload();
+			    });
+			document.getElementById('button-blue').addEventListener('click', function () {
+				fetch('/public/methods/delete/blue.jpg', {
+					method: 'DELETE',
+				});
+				document.querySelector('.flex-item-blue').style.display = 'none';
+				//location.reload();
+			});
+			document.getElementById('button-red').addEventListener('click', function () {
+				fetch('/public/methods/delete/red.jpg', {
+					method: 'DELETE',
+				});
+				document.querySelector('.flex-item-red').style.display = 'none';
+				//location.reload();
+			});
+		</script>
+	<p><a href="/public/index.html">Retourner à l'accueil</a></p>
+	</body>
+</html>
